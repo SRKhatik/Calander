@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+
+}
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #ff6e3154;
+
+}
+
+.container{
+    width: 450px;
+    height:450px;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+
+}
+
+
+.container ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.container ul.weeks{
+    display: flex;
+    font-weight: 600;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.header .icon i{
+padding: 10px;
+background-color: #0000007d;
+color: white;
+border-radius: 50%;
+cursor: pointer;
+margin: 0 1px;
+height: 38px;
+width: 38px;
+font-size: 1rem;
+text-align: center;
+transition:0.5s
+}
+
+
+.header .icon i:hover{
+    background-color: #FF6E31;
+}
+
+
+.container ul.days{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.container .days li, .container .weeks li {
+    width: calc(100% / 7);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.container .days {
+margin: 1rem 0 2rem;
+
+}
+
+
+.container .days li{
+    border-radius: 50%;
+    height: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   z-index: 1;
+   transition: 0.5s;
+}
+
+.container .days li:hover:before{
+content:'';
+position: absolute;
+left: 50%;
+top: 50%;
+width: 100%;
+height: 100%;
+background-color: #ff6e313b;
+z-index: -1;
+transform: translate(-50%,-50%);
+border-radius: 50%;
+}
+
+.container .days li.active{
+    background-color: #FF6E31;
+}
+
+.container .days li.inactive{
+background-color:#8080804a;
+opacity: 0.5;
+
+
+}
+
+
+
+/* .container .days li:hover{
+    background-color: #FF6E31;
+    font-weight: 600;
+} */
